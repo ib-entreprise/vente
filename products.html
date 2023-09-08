@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prix-bas</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+</head>
+
+
+<body>
+    <header class="grid grid-cols-2 bg-gray-200 text-black ">
+        <img src="images/logo/logo_color.png" class="text-left rounded-full mx-8  " alt="">
+        <p class="text-right mr-4 text-[18px] font-semibold text-right md:hidden">Tout vos besoins a Petit prix dans la
+            metropole lilloise</p>
+        <div class="text-right hidden md:block mr-4">
+            <ul class="flex gap-8 text-[15px] ml-4 md:text-[15px] mt-2 ">
+                <li class="flex"><a href="#">
+                        <span class="bg-orange-500 text-white rounded-full mx-2 px-3 p-2">1</span> Choix et Commandes
+                        des articles </a>
+                </li>
+                <li class="flex"><a href="#">
+                        <span class="bg-orange-500 text-white rounded-full mx-2 px-3 p-2">2</span> Retrait
+                        des articles </a>
+                </li>
+                <li class="flex"><a href="#">
+                        <span class="bg-orange-500 text-white rounded-full mx-2 px-3 p-2">3</span> Paiement
+                        des articles </a>
+                </li>
+
+            </ul>
+        </div>
+    </header>
+    <nav class="bg-gray-900 text-white  text-[20px]">
+        <div class="grid grid-cols-2 md:mx-[200px] p-4">
+            <div class="text-left hidden md:block">
+                <ul class="flex ml-2 text-black gap-4 ">
+                    <li class="w-1/4">
+                        <select name="categorie" id="" class="rounded-lg p-3 ">
+                            <option value="">Cuisine</option>
+                            <option value="">bricolage</option>
+                            <option value="">Sport</option>
+                        </select>
+                    </li>
+                    <li> <input class="rounded w-2/4 w-full p-2" type="text" placeholder="Quel Article ?"> </li>
+                    <li class="w-1/4 "><button class="bg-red-500 text-white p-2 rounded-lg w-full">Rechercher</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-righ">
+                <div class="grid grid-cols-1 text-center">
+                    <ul class="flex gap-8 text-[15px] ml-4 md:text-[25px] ">
+                        <li class=""><a href="#"> Catalogue</a></li>
+                        <li class=""><a href="#"> Question Frequentes</a></li>
+                        <li class=""><i class="fa fa-user text-white text-[25px]"></i></li>
+                        <li class=""><i class="fa fa-cart-shopping text-orange-500 text-[25px] md:text-[35px]"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+      <!-- ********** section filtre ************* -->
+      <section class="mt-4 mx-10 md:mt-[100px] mx-20 md:mx-[200px] ">
+        <button id="buttonOpenFiltre" class=" text-blue-600 flex gap-2 ">
+          <i class="fa fa-sliders text-right pb-4 mb-2"></i> <span>Plus De Filtres</span> 
+        </button>
+        <button id="buttonCloseFiltre" class=" text-blue-600 grid grid-cols-1 hidden">
+           <i class="fa fa-sliders text-right pb-4 mb-2"></i> <span>Moins De Filtres</span> 
+         </button>
+   
+        <div class="grid cols-1 hidden " id="contentFiltre">
+           <ul class="grid grid-cols-2 md:grid-cols-4 mr-4 pr-4 ">
+               <li>  
+                   <div>
+                       <input type="checkbox" id="mutimedia" name="mutimedia"  />
+                       <label for="mutimedia">Multimedia</label>
+                   </div>
+               </li>
+               <li>  
+                   <div>
+                       <input type="checkbox" id="cuisine" name="cuisine"  />
+                       <label for="cuisine">Cuisine</label>
+                   </div>
+               </li>
+               <li>  
+                   <div>
+                       <input type="checkbox" id="bricolage" name="bricolage"  />
+                       <label for="bricolage">Bricolage</label>
+                   </div>
+               </li>
+               <li>  
+                   <div>
+                       <input type="checkbox" id="sport" name="sport"  />
+                       <label for="sport">Sport</label>
+                   </div>
+               </li>
+               <li>  
+                   <div>
+                       <input type="checkbox" id="mutimedia" name="mutimedia"  />
+                       <label for="mutimedia">Multimedia</label>
+                   </div>
+               </li>
+               <li>  
+                   <div>
+                       <input type="checkbox" id="mutimedia" name="mutimedia"  />
+                       <label for="mutimedia">Multimedia</label>
+                   </div>
+               </li>
+                
+           </ul>
+        </div>
+       </section>
+       <!-- ******** end section filtre ********* -->
+       
+     
+
+<section class="mt-4 mx-10 md:mt-[40px] px-4 mx-20 md:mx-[200px]  ">
+        
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 ">
+        <div class="grid mb-2 rounded-xl  border-2 border-orange-100" id="openModalButton">
+            <img src="images/images1.jpg" class="w-full" alt="images1">
+            <span class="grid pl-4 text-left text-orange-500" >Categorie </span>
+            <p class="grid p-4 text-left ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, aspernatur                     
+                t error veniam labore numquam perferendis perspiciatis blanditiis
+                 tempore quia sunt omnis.</p>
+            <div class="flex px-4 text-xl">
+                <div class="flex-1 text-left">20$</div>
+                <div class="flex-1 text-right"><i class=" fa fa-cart-shopping text-orange-500"></i></div>
+            </div>
+        </div>
+        <div class="grid mb-2">
+            <img src="images/images2.jpg" class="w-full" alt="images1">
+            <div class="flex px-4 text-xl">
+                <div class="flex-1 text-left">20$</div>
+                <div class="flex-1 text-right"><i class=" fa fa-cart-shopping text-orange-500"></i></div>
+            </div>
+        </div>
+
+        <div class="grid mb-2">
+            <img src="images/images3.jpg" class="w-full" alt="images1">
+            <div class="flex px-4 text-xl">
+                <div class="flex-1 text-left">20$</div>
+                <div class="flex-1 text-right"><i class=" fa fa-cart-shopping text-orange-500"></i></div>
+            </div>
+        </div>
+
+        <div class="grid mb-2">
+            <img src="images/images4.jpg" class="w-full" alt="images1">
+            <div class="flex px-4 text-xl">
+                <div class="flex-1 text-left">20$</div>
+                <div class="flex-1 text-right"><i class=" fa fa-cart-shopping text-orange-500"></i></div>
+            </div>
+        </div>
+     </div>
+     <!-- Modal (caché par défaut) -->
+    
+     <div id="myModal" class="modal hidden fixed inset-0 overflow-y-hidden ">
+        <div class="flex items-center justify-center min-h-screen">
+            <!-- Arrière-plan semi-transparent -->
+            <div class="modal-overlay fixed inset-0 bg-black opacity-80"></div>
+            <!-- Modal avec position top: 100px -->
+            <div class="modal-content bg-white mx-4 md:p-8 md:w-1/2 hover:cursor-pointer rounded shadow-lg absolute top-10 ">
+                <span id="closeModalButton" class="absolute top-0 right-0 m-4 text-gray-600 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6.293 6.293a1 1 0 011.414 0L12 10.586l4.293-4.293a1 1 0 111.414 1.414L13.414 12l4.293 4.293a1 1 0 01-1.414 1.414L12 13.414l-4.293 4.293a1 1 0 01-1.414-1.414L10.586 12 6.293 7.707a1 1 0 010-1.414z" fill="currentColor"></path></svg>
+                </span>
+                
+                <div class="grid grid-cols-1 " id="contentModal">
+                    <div class="text-center mb-2 rounded-xl  border-1" id="openModalButton">
+                        <img src="images/images1.jpg" class="w-full objet-cover h-64 md:h-[400px]"  alt="images1">
+                         
+                            <ul class="flex" id="declinaison_image_products">
+                                <li><img src="images/images1.jpg" width="80px" class="rounded-lg"  alt=""></li>
+                                <li><img src="images/images2.jpg" width="80px" class="rounded-lg"  alt=""></li>
+                                <li><img src="images/images3.jpg" width="80px" class="rounded-lg"  alt=""></li>
+                                <li><img src="images/images4.jpg" width="80px" class="rounded-lg"  alt=""></li>
+                            </ul>
+                         <!-- Onglets -->
+                         <hr>
+                        <div class="flex m-4 gap-4">
+                            <button id="tab1" class="rounded-md md:px-2 bg-white text-blue-600 px-2 tab-button active">Onglet 1</button>
+                            <button id="tab2" class="rounded-md md:px-2 bg-white text-blue-600 px-2 tab-button">Livraison</button>
+                            <button id="tab3" class="rounded-md md:px-2 bg-white text-blue-600 px-2 tab-button">Retrait</button>
+                        </div>
+                        <hr>
+                         <!-- Contenu des onglets -->
+                        <div id="content1" class="tab-content overflow-y-auto">
+                            <span class="grid pl-4 text-left text-orange-500" >Categorie </span>
+                            <p class="grid p-4 text-left ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, aspernatur                     
+                                t error veniam labore numquam perferendis perspiciatis blanditiis
+                                 tempore quia sunt omnis.
+                                lorem</p>
+                            <div class="flex px-4 text-xl">
+                                <div class="flex-1 text-left">20$</div>
+                                <div class="flex-1 text-right"><i class=" fa fa-cart-shopping text-orange-500"></i></div>
+                            </div>
+                        </div>
+
+                        <div id="content2" class="tab-content overflow-y-auto hidden">
+                            <h2 class="text-2xl font-bold mb-4">Livraison Express</h2>
+                            <p>Ceci est le contenu de l'onglet 2.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus minus 
+                                inventore ex esse repellendus, sit quos enim necessitatibus hic distinctio 
+                                accusantium eum error facilis vitae, alias maiores omnis debitis laborum.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus minus 
+                                inventore ex esse repellendus, sit quos enim necessitatibus hic distinctio 
+                                accusantium eum error facilis vitae, alias maiores omnis debitis laborum.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus minus 
+                                inventore ex esse repellendus, sit quos enim necessitatibus hic distinctio 
+                                accusantium eum error facilis vitae, alias maiores omnis debitis laborum.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus minus 
+                                inventore ex esse repellendus, sit quos enim necessitatibus hic distinctio 
+                                accusantium eum error facilis vitae, alias maiores omnis debitis laborum.
+                            </p>
+                        </div>
+
+                        <div id="content3" class="tab-content overflow-y-auto hidden">
+                            <h2 class="text-2xl font-bold mb-4"> Retirer A Cote De Chez Vous </h2>
+                            <p>Ceci est le contenu de l'onglet 3.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus minus 
+                                inventore ex esse repellendus, sit quos enim necessitatibus hic distinctio 
+                                accusantium eum error facilis vitae, alias maiores omnis debitis laborum.
+                            </p>
+                        </div>                                                       
+
+                    </div>
+                    <!-- <div class="relative   bg-gray-200">
+                        <div class="absolute left-4 bottom-2 bg-blue-600 text-white ">Voir Plus</div>
+                     </div> -->
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+ 
+<script src="script.js"></script>
+</body>
+</html>
